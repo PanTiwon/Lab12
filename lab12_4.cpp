@@ -2,6 +2,10 @@
 
 using namespace std;
 
+template <typename T>
+//ในโค้ดด้านบนนี้Tเป็นอาร์กิวเมนต์เทมเพลตที่ยอมรับประเภทข้อมูลที่แตกต่างกัน ( int, float, เป็นต้น) และtypenameเป็นคำสำคัญ
+void mySwap(T &, T &);
+
 int main(){
 	int x, y;
 	string a, b;
@@ -30,3 +34,9 @@ int main(){
 	return 0;
 }
 
+template <typename T>
+void mySwap(T &x, T &y){
+	T temp = x;
+	x = y;
+	y = temp;
+}
